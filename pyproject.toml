@@ -7,6 +7,10 @@ authors = [
 ]
 dependencies = [
     "jupyter>=1.0.0",
+    "annotated-types>=0.7.0",
+    "pydantic>=2.8.2",
+    "devtools>=0.12.2",
+    "rich>=13.7.1",
 ]
 requires-python = "==3.11.*"
 readme = "README.md"
