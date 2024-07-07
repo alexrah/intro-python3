@@ -11,6 +11,8 @@ dependencies = [
     "pydantic>=2.8.2",
     "devtools>=0.12.2",
     "rich>=13.7.1",
+    "polars>=1.1.0",
+    "pandas>=2.2.2",
 ]
 requires-python = "==3.11.*"
 readme = "README.md"
