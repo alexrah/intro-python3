@@ -8,7 +8,8 @@ tCount = Literal[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
 class Inventory(BaseModel):
-    count: Annotated[int, Interval(ge=0, le=10)]
+    # count: Annotated[int, Interval(ge=0, le=10)]
+    count: tCount
     item: Annotated[str, Len(min_length=3)]
 
     class Config:
@@ -22,10 +23,10 @@ def print_items(count: tCount, obj_type: str, color: str = 'purple') -> None:
 
 print_items('10', 'phone', 'blue')
 print_items(color='red', count=26, obj_type='table')
-testPydantic = Inventory(count=9, item='sas')
+testPydantic = Inventory(count='dasd', item='sas')
 print(testPydantic)
 debug(testPydantic)
-testPydantic.count = '123123'
+testPydantic.count = 50
 
 # testPydantic.__setattr__('count', 6)
 # debug(testPydantic.model_json_schema())
